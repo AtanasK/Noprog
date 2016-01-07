@@ -11,18 +11,25 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
 public class NoProgGame extends ApplicationAdapter {
     private SpriteBatch batch;
-    private BitmapFont font;
+
 	
 	@Override
 	public void create () {
-        batch = new SpriteBatch();
-        font = new BitmapFont();
-
-        font.setColor(Color.BLUE);
-        font.getData().scale(5);
     }
 
-	@Override
+    @Override
+    public void dispose() {
+    }
+
+    @Override
 	public void render () {
+        Gdx.gl.glClearColor(1, 1, 1, 1);
+        Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
+
+        batch.begin();
+
+
+
+        batch.end();
 	}
 }
