@@ -5,13 +5,13 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
-import mk.atanask.noprog.States.GameStateManager;
-import mk.atanask.noprog.States.MenuState;
+import mk.atanask.noprog.gameStates.GameStateManager;
+import mk.atanask.noprog.gameStates.MenuState;
 
 public class NoProgGame extends ApplicationAdapter {
 
     public static final int WIDTH = 480;
-    public static final int HEIGHT = 800;
+    public static final int HEIGHT = 320;
     public static final String TITLE = "flepibrd";
 
     private GameStateManager gsm;

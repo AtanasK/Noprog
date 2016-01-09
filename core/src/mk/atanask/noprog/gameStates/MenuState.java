@@ -1,4 +1,4 @@
-package mk.atanask.noprog.States;
+package mk.atanask.noprog.gameStates;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
