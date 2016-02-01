@@ -11,9 +11,8 @@ import mk.atanask.noprog.gameStates.MenuState;
 
 public class NoProgGame extends ApplicationAdapter {
 
-    public static final int WIDTH = 320;
-    public static final int HEIGHT = 480;
-    public static final String TITLE = "flepibrd";
+    public static final int WIDTH = 540;
+    public static final int HEIGHT = 860;
 
     private GameStateManager gsm;
     private SpriteBatch batch;
