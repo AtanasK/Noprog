@@ -35,6 +35,17 @@ public class Tube {
 
     }
 
+    public void reposition(float x) {
+        posTopTube.set(x, rand.nextInt(FLUCTUATION) + TUBE_GAP + LOWEST_OPENING);
+        posBotTube.set(x, posTopTube.y - TUBE_GAP - bottomTube.getHeight());
+        boundsBot.setPosition(posBotTube.x, posBotTube.y);
+        boundsTop.setPosition(posTopTube.x, posTopTube.y);
+    }
+
+    public boolean collides(Rectangle player) {
+        return player.overlaps(boundsBot) || player.overlaps(boundsTop);
+    }
+
     public Texture getTopTube() {
         return topTube;
     }
@@ -49,17 +60,6 @@ public class Tube {
 
     public Vector2 getPosTopTube() {
         return posTopTube;
-    }
-
-    public void reposition(float x) {
-        posTopTube.set(x, rand.nextInt(FLUCTUATION) + TUBE_GAP + LOWEST_OPENING);
-        posBotTube.set(x, posTopTube.y - TUBE_GAP - bottomTube.getHeight());
-        boundsBot.setPosition(posBotTube.x, posBotTube.y);
-        boundsTop.setPosition(posTopTube.x, posTopTube.y);
-    }
-
-    public boolean collides(Rectangle player) {
-        return player.overlaps(boundsBot) || player.overlaps(boundsTop);
     }
 
     public void dispose() {
